@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -h guillaume hello
+chmod -h betty guillaume hello
