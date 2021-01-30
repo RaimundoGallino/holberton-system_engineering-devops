@@ -1,0 +1,11 @@
+#!/bin/bash
+git add .
+git status
+echo "Commit"
+read commitMessage
+echo "Branch"
+read actualBranch
+
+git commit -m commitMessage
+
+git push origin actualBranch
