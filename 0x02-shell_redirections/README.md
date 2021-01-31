@@ -1,1 +1,1 @@
-This directory contains Bash scripts for multiple types of redirections and special characters been used as an useful way. Some of the command used  them are "head, tail, cat, echo, find, wc, sort, uniq, grep, tr, rev, cut "
+This directory contains Bash scripts for multiple types of redirections and special characters been used as an useful way. Some of the commands being used are "head, tail, cat, echo, find, wc, sort, uniq, grep, tr, rev, cut "
