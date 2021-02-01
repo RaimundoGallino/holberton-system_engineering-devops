@@ -1,0 +1,1 @@
+This folder contains shell scripts using: printv, set, unset, export, alias, unalias, source, printf commands. Some of them maybe usefull on multiple kind of situations.
