@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times and 9th time prints Hi
-
+# This script displays "Holberton School" 10 times 4th and 8th your luck
 
 i=0
 while [ $i -lt 10 ]

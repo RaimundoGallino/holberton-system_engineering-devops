@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script displays 10 times "Holberton School"
 
 counter=0
 
