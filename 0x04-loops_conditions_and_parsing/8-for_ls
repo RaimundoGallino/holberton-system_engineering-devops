@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script displays content of the current directory
-dir=$dir
+
 for dir in sample/*;
 do
-find | cut -d'-' -f2
+echo "dir" | cut -d'-' -f2
 done
