@@ -8,7 +8,7 @@ while [ $i -le 59 ]
 do
   ((i++))
   
-  if [ $i = 59 ];
+  if [ $i -eq 59 ];
   then
   ((counter++))
   echo "Hour: $counter"
