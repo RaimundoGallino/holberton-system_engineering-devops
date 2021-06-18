@@ -2,23 +2,16 @@
 # This script displays the time for 12 hours and 59 minutes
 
 i=0
-counter=0
+j=0
 
-while [ $i -le 59 ]
+while [ $i -lt 12 ]
 do
-  ((i++))
-  
-  if [ $i -eq 59 ];
-  then
-  ((counter++))
-  echo "Hour: $counter"
-  i=0
-  fi
-  if [ $counter = 12];
-  then
-  exit 0
-  else
-  echo $i
-  fi
 
+    echo "Hour: $i"
+    while [ $j -lt 59 ]
+    do
+    echo $j
+    ((j++))
+    done
+    ((i++))
 done
