@@ -2,7 +2,8 @@
 # This script displays the time for 12 hours and 59 minutes
 
 i=0
-j=1
+counter=0
+
 while [ $i -le 59 ]
 do
   ((i++))
