@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays content of the current directory
+
+while *;
+do
+cut /etc/passwd
+done
