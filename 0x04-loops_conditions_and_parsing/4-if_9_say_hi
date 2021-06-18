@@ -2,9 +2,10 @@
 i=0
 while [ $i -le 9 ]
 do
-  echo "Holberton School"
   if [ $i -e 8 ];
   then
   echo "Hi"
+  else
+  echo "Holberton School"
   ((i++))
 done
