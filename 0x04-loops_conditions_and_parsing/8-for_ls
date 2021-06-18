@@ -3,5 +3,5 @@
 
 for dir in sample/*;
 do
-find | cut -d'-' -f2
+echo dir| cut -d'-' -f2
 done
