@@ -11,6 +11,7 @@ do
   then
   ((counter++))
   echo "Hour: $counter"
+  i=0
   elif [ $counter = 12];
   then
   exit 0
