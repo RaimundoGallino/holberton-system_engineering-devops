@@ -6,12 +6,12 @@ j=0
 
 while [ $i -lt 12 ]
 do
-
     echo "Hour: $i"
     while [ $j -lt 59 ]
     do
     echo $j
     ((j++))
     done
+    j=0
     ((i++))
 done
