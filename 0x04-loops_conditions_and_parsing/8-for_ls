@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script displays the time for 12 hours and 59 minutes
 
-for dir in sample/*; do
-    ls | cut -d'-' -f2
+for dir in sample/*;
+do
+ls | cut -d'-' -f2
 done
