@@ -7,7 +7,7 @@ j=0
 while [ $i -le 12 ]
 do
     echo "Hour: $i"
-    while [ $j -lt 59 ]
+    while [ $j -le 59 ]
     do
     echo $j
     ((j++))
