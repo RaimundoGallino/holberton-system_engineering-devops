@@ -2,6 +2,5 @@
 # This script displays the time for 12 hours and 59 minutes
 
 for f in *; do
-    [[ -e $f ]] || continue
-    ...
+    ls | cut -d'-' -f2
 done
