@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # pings an IP address passed as an argument.
 
-if "$#";
+if "$#"
 then
 ping -c 5 "$#"
 else
