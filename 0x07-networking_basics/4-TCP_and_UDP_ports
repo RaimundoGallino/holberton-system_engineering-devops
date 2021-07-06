@@ -1,9 +1,2 @@
 #!/usr/bin/env bash
-PORT=8080
-a=$(netstat -plnt | grep $PORT | awk '{print $6}')
-#echo $a;exit
-while [ "$a" != "LISTEN" ]
-do
- (( PORT=PORT+1 ))
- printf "Port number is $PORT\n"
-done
+netstat -l
