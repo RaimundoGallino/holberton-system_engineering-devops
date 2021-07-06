@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-# that displays listening ports:
-
-#That only shows listening sockets
-#That shows the PID and name of the program to which each socket belongs
+# pings an IP address passed as an argument.
 
 if "$1";
 then
