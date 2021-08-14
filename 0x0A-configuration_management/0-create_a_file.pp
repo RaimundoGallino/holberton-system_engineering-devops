@@ -1,3 +1,5 @@
+#this is a comment
+
 file { 'holberton':
     path    => '/tmp/holberton'
     ensure  => present,
