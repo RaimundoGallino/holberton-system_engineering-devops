@@ -1,0 +1,7 @@
+Host 34.138.129.44
+    HostName 34.138.129.44
+    Port 22
+    User ubuntu
+        IdentityFile ~/.ssh/holberton
+	    IdentitiesOnly yes
+        PasswordAuthentication=no
