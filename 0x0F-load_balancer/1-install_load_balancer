@@ -3,18 +3,17 @@ sudo apt-get update
 sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-1.8
 sudo apt-get install haproxy
-printf 'frontend firstbalance \n
-        \t\t bind *:80 \n
-        \t\t option forwardfor \n
-        \t\t default_backend webservers \n
-        backend webservers \n
-        \t\t mode http \n
-        \t\t balance roundrobin \n
-        \t\t option forwardfor \n
-        \t\t http-request set-header X-Forwarded-Port %[dst_port] \n
-        \t\t http-request add-header X-Forwarded-Proto https if { ssl_fc } \n
-        \t\t option httpchk HEAD / HTTP/1.1rnHost:localhost \n
-        \t\t 2791-web-01 34.138.71.136:80 \n
-        \t\t 2791-web-02 34.75.27.207:80 \n'
-        >> cat /etc/haproxy/haproxy.cfg
+printf %s "frontend firstbalance
+            bind *:80
+            option forwardfor
+            default_backend webservers
+        backend webservers
+            mode http
+            balance roundrobin
+            option forwardfor
+            http-request set-header X-Forwarded-Port %[dst_port]
+            http-request add-header X-Forwarded-Proto https if { ssl_fc }
+            server 2791-web-01 34.138.71.136:80
+            server 2791-web-02 34.75.27.207:80
+" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
