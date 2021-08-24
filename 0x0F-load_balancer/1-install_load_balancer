@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 sudo apt-get update -y
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
-sudo apt-get upgrade -y
-sudo apt-get install haproxy -y
+apt-get install haproxy=1.6.\* -y
 
 printf %s "frontend firstbalance
             bind *:80
-            option forwardfor
+            stats uri /haproxy?stats
             default_backend webservers
         backend webservers
             balance roundrobin
