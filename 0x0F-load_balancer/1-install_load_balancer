@@ -13,12 +13,8 @@ printf %s "frontend firstbalance
             option forwardfor
             default_backend webservers
         backend webservers
-            mode http
             balance roundrobin
-            option forwardfor
-            http-request set-header X-Forwarded-Port %[dst_port]
-            http-request add-header X-Forwarded-Proto https if { ssl_fc }
-            server 2791-web-01 34.138.71.136:80
-            server 2791-web-02 34.75.27.207:80
+            server 2791-web-01 34.138.71.136:80 check
+            server 2791-web-02 34.75.27.207:80 check
 " >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
