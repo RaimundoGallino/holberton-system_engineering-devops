@@ -4,10 +4,7 @@ sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
 sudo apt-get upgrade -y
 sudo apt-get install haproxy -y
-printf %s "
-127.0.0.1 haproxy.local
-34.138.71.136 web1.local
-34.75.27.207 web2.local" >> /etc/hosts
+
 printf %s "frontend firstbalance
             bind *:80
             option forwardfor
