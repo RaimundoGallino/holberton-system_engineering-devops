@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# este es un comenatario dale checker
 sudo apt-get update -y
 apt-get install haproxy=1.6.\* -y
 
