@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Nginx is running as the nginx user
 
 sudo pkill -o apache2
 sudo chmod 644 /etc/nginx/nginx.conf
