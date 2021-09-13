@@ -16,7 +16,8 @@ if __name__ == "__main__":
     new_dict = {}
     for i in r.json():
         task_list = []
-        u = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.format(i['id']))
+        u = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
+                         .format(i['id']))
         for j in range(0, len(u.json())):
             task_dict = {}
             task_dict["username"] = i['username']
@@ -27,37 +28,3 @@ if __name__ == "__main__":
 
     with open('todo_all_employees.json', 'w') as f:
         json.dump(new_dict, f)
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
-
-
-    for j in range(len(u.json())):
-        id = u.json()[j]['id']
-        task_list = []
-        u = requests.get('https://jsonplaceholder.typicode.com/users?id={}'.format(id))
-        num_of_tasks = len(u.json())
-        for i in range(num_of_tasks):
-            task_dict["task"] = r.json()[i]['title']
-            task_dict["completed"] = r.json()[i]['completed']
-            task_dict["username"] = u.json()[0]['username']
-            task_list.append(task_dict)
-        new_dict[id] = task_list
-
-    print(new_dict)
-
-    with open('todo_all_employees.json', 'w') as f:
-        json.dump(new_dict, f)
-
-"""
