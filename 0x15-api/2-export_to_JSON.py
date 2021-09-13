@@ -5,9 +5,9 @@ for a given employee ID,
 returns information about his/her TODO list progress.
 """
 
+import json
 import requests
 from sys import argv
-
 
 if __name__ == "__main__":
 
@@ -30,3 +30,6 @@ if __name__ == "__main__":
 
     new_dict = {argv[1]: task_list}
     print(new_dict)
+    
+    with open(argv[1] + '.json', 'w') as f:
+        json.dump(new_dict, f)
