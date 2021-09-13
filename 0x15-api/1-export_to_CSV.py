@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 for a given employee ID, 
 returns information about his/her TODO list progress.
@@ -24,10 +23,9 @@ for i in range(num_of_tasks):
     if (r.json()[i]['completed'] is True):
         completed += 1
 
-print("Employee {} is done with tasks ({}/{}):"
-      .format(name, completed, num_of_tasks))
-for i in task_list:
-    print("\t {}".format(i))
+with open(f"{argv[1]}.csv", "w") as f:
+    for i in task_list:
+        f.write(i)
 
 
 if __name__ != "__main__":
