@@ -19,9 +19,8 @@ num_of_tasks = len(r.json())
 task_list = []
 
 for i in range(num_of_tasks):
-    task_list.append(r.json()[i]['title'])
-
     if (r.json()[i]['completed'] is True):
+        task_list.append(r.json()[i]['title'])
         completed += 1
 
 print("Employee {} is done with tasks ({}/{}):"
