@@ -12,4 +12,5 @@ def top_ten(subreddit):
         r = req.json()['data']['children']
         for i in range(len(r)):
             print(r[i]['data']['title'])
-    return 0
+    else:
+        return None
