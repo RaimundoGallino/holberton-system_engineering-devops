@@ -10,7 +10,7 @@ def top_ten(subreddit):
     req = requests.get(url, headers={'User-agent': 'your bot 0.1'})
     if req.status_code == 200:
         r = req.json()['data']['children']
-        for i in range(len(r)):
+        for i in range(10):
             print(r[i]['data']['title'])
     else:
         print(None)
